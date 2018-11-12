@@ -1,0 +1,199 @@
+<!DOCTYPE HTML>
+<html lang = "en">
+<head>
+<title>Thrifty WiFi</title>
+<meta charset = "UTF-8" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+<style>
+body{
+    background-image:linear-gradient(0deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("./Ewaste.jpg");
+    background-attachment: fixed;
+    background-size:100%;
+}
+
+h1{
+    color:white;
+}
+
+
+
+.container.list {
+    color:white;
+    margin-top: 20px;
+}
+
+.header{
+    border-color: antiquewhite;
+    border-style:solid;
+    border-width:5px;
+    border-radius:5px;
+    text-align:center;
+}
+
+.list{
+    padding:25px 25px;
+
+}
+#source{
+
+    text-align:right;
+}
+#source a{ 
+    color:white;
+}
+
+.big.container{
+    background:rgba(0,0,0,0.5);
+    padding-top:25px;
+
+}
+.continue button{
+    color:white;
+}
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 100;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+    margin: 0 20% 0 20%;
+}
+
+.modal-body {padding: 2px 16px;background-color:white;    margin: 0 20% 0 20%;
+}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+</style>
+
+</head>
+<body >
+    <div class="big container">
+
+        <div class="container">
+            <div class="row">
+                <div class="header">
+                    <h1>This is <i>Thrifty WiFi</i> for <i>thrifty</i> people.</h1>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container list">
+            
+            <ul>
+                <li>In 2009, discarded TVs, computers, peripherals (including printers, scanners, fax machines) mice, keyboards, and cell phones totaled about 2.37 million short tons.</li>
+                <li>E-waste represents 2% of America's trash in landfills, but it equals 70% of overall toxic waste. </li>
+                <li>20 to 50 million metric tons of e-waste are disposed worldwide every year. </li>
+                <li>Cell phones and other electronic items contain high amounts of precious metals like gold or silver. Americans dump phones containing over $60 million in gold/silver every year.</li>
+                <li>A large number of what is labeled as "e-waste" is actually not waste at all, but rather whole electronic equipment or parts that are readily marketable for reuse or can be recycled for materials recovery.</li>
+                <li>Only 12.5% of e-waste is currently recycled. </li>
+                <li>For every 1 million cell phones that are recycled, 35,274 lbs of copper, 772 lbs of silver, 75 lbs of gold, and 33 lbs of palladium can be recovered. </li>
+                <li>Recycling 1 million laptops saves the energy equivalent to the electricity used by 3,657 U.S. homes in a year. </li>
+                <li>E-waste is still the fastest growing municipal waste stream in America, according to the EPA. </li>
+                <li>It takes 530 lbs of fossil fuel, 48 lbs of chemicals, and 1.5 tons of water to manufacture one computer and monitor.</li>
+                <li>Electronic items that are considered to be hazardous include, but are not limited to: Televisions and computer monitors that contain cathode ray tubes, LCD desktop monitors, LCD televisions, Plasma televisions, Portable DVD players with LCD screens.</li>
+            </ul>
+            <div id="source">source: <a href="https://www.dosomething.org/us/facts/11-facts-about-e-waste" alt="link to dosomething.org"">DoSomething.org</a></div>
+        </div>
+        <div class="container continue"><button id="btn">Continue online</button></div>
+        <div id="tooNew" class="modal">
+            <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2>Your device is too new!</h2>
+                    </div>
+            <div class="modal-body">
+                <h3>Please be more thrifty!</h3>
+            </div>
+        </div>
+    </div>
+
+
+<script>
+        // Get the modal
+        var modal = document.getElementById('tooNew');
+        
+        // Get the button that opens the modal
+        var btn = document.getElementById("btn");
+        
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+        
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+        </script>
+    </body>
+    
